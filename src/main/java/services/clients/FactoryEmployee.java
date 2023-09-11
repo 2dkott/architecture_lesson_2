@@ -3,15 +3,16 @@ package services.clients;
 import java.util.Random;
 
 public class FactoryEmployee {
-    private long id;
+    private final long id;
 
-    private String fio;
+    private final String fio;
 
     public FactoryEmployee(String name, String lastName) {
         this(new Random().nextLong(), name, lastName);
     }
 
     public FactoryEmployee(long id, String name, String lastName) {
+        this.id = id;
         this.fio = name + "_" + lastName;
     }
 
